@@ -1,7 +1,7 @@
 `define CLKFREQ		100
 `define SIMCYCLE	50
 
-`include	"02_latch_vs_dff.v"
+`include	"latch_vs_dff.v"
 
 module latch_vs_dff_tb;
 
@@ -12,16 +12,16 @@ module latch_vs_dff_tb;
 
 	latch
 	u_latch(
-		.o_q (),
-		.i_d (),
-		.i_clk ()
+		.o_q    (o_q_lat  ),
+		.i_d    (i_d      ),
+		.i_clk  (i_clk	  )
 	);
 
 	dff
 	u_dff(
-		.o_q (),
-		.i_d (),
-		.i_clk ()
+		.o_q    (o_q_dff  ),
+		.i_d    (i_d      ),
+		.i_clk  (i_clk	  )
 	);
 
 	always #(500/`CLKFREQ) i_clk = ~i_clk;

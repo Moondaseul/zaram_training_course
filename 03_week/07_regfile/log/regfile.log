@@ -1,0 +1,2 @@
+ERROR: ./regfile.v:29: $readmemb: Unable to open regfile.mif for reading.
+VCD info: dumpfile ./vcd/regfile.vcd opened for output.
